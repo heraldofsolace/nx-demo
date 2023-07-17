@@ -10,14 +10,14 @@ export function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3000/customer').then((response) => {
+    axios.get('http://localhost:3000/admin').then((response) => {
       setMessage(response.data);
     });
   }, []);
 
   return (
     <div>
-      <Header text="Welcome to customer!" />
+      <Header text="Welcome to admin!" />
       <p>{message}</p>
     </div>
   );
